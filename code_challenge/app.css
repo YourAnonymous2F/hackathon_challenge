@@ -27,7 +27,7 @@
 body{
     background: var(--subbackground);
 }
-
+/* header */
 header{
     background: var(--navdarkershade);
     display: flex;
@@ -36,7 +36,7 @@ header{
     padding: 15px 10px;
     color: white;
 }
-
+/* search box */
 .search-box{
     background: var(--navdarkshade);
     border: 1px solid var(--strokelight);
@@ -48,7 +48,7 @@ header{
     height: 30px;
     padding: 5px 10px;
 }
-
+/* input search box  design*/
 .search-box #search{
     border: none;
     outline: none;
@@ -56,11 +56,11 @@ header{
     width: 100%;
     color: var(--textlight);
 }
-
+/* input search boc placeholder attribute */
 .search-box #search::placeholder{
     color: var(--textlight);
 }
-
+/* display for the notification icon and the user info */
 .noti,
 .noti .user{
     display: flex;
@@ -69,7 +69,7 @@ header{
     justify-content: center;
     height: 30px;
 }
-
+/* attribute for the div containing the notification image */
 .noti .noti-image{
     background: var(--navdarkshade);
     border-radius: 5px;
@@ -79,19 +79,19 @@ header{
     align-items: center;
     justify-content: center;
 }
-
+/* attribute for the div containing the user name */
 .noti .user{
     background: var(--navdarkshade);
     height: 30px;
     padding: 3px 2px 5px 5px;
     border-radius: 5px;
 }
-
+/* attribute for the user name main */
 .noti .user h3{
     font-size: 12px;
     font-weight: 400;
 }
-
+/* attribute fot the short form of the name */
 .noti .user p{
     font-size: 12px;
     background: #40ff8c;
@@ -100,7 +100,7 @@ header{
     font-weight: 500;
     color: var(--textmid);
 }
-
+/* containing the body items */
 section{
     display: flex;
     flex-direction: column;
@@ -108,7 +108,7 @@ section{
     margin: 20px 0;
     gap: 10px;
 }
-
+/* the container for the select plans option */
 .container{
     background: var(--navdarkershade);
     width: 65%;
@@ -119,19 +119,19 @@ section{
     padding: 17px 10px;
     color: var(--textlight);
 }
-
+/* the text attribute in the select plan */
 .container h4{
     font-size: 14px;
     font-weight: 500;
 }
-
+/* the div for the button selct plan */
 .container .box{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 7px;
 }
-
+/* attributes for  the select plan button */
 .container .box #select{
     width: 100px;
     height: 30px;
@@ -142,11 +142,11 @@ section{
     font-size: 13px;
     font-weight: 600;
 }
-
+/* effect when the select plan is hovered on */
 .container .box #select:hover{
     background: var(--hover);
 }
-
+/* div containing the inforamtion to be filled */
 .container2{
     background: var(--mainbackground);
     border: 2px solid var(--strokelight);
@@ -156,35 +156,35 @@ section{
     border-radius: 10px;
     padding: 15px;
 }
-
+/* div containing the setup guide and arrow */
 .container2-info{
     display: flex;
     justify-content: space-between;
 }
-
+/* attributes for the setup guide text */
 .container2-info1 h5{
     font-size: 14px;
     font-weight: 600;
 }
-
+/* attributes for the paragraph text under the setup guide text */
 .container2-info1 #p1{
     margin: 5px 0;
     font-size: 14px;
     font-weight: 500;
 }
-
-.container2-info1 .progress #p2{
-    font-size: 12px;
-    font-weight: 500;
-}
-
+/* div containing the progress bar and the text */
 .container2-info1 .progress{
     display: flex;
     align-items: center;
     gap: 5px;
     margin: 15px 0 20px 0;
 }
-
+/* attribute for the paragraph before the progress bar */
+.container2-info1 .progress #p2{
+    font-size: 12px;
+    font-weight: 500;
+}
+/* div for the main progress bar */
 .progress .progress-bar{
     background: var(--navlightshade);
     width: 20%;
@@ -192,19 +192,26 @@ section{
     border-radius: 10px;
     overflow: hidden;
 }
-
+/* div for the sub progress percentage */
 .progress-bar .progress-percent{
     background: var(--navdarkshade);
     width: 20%;
     height: 5px;
 }
-
+/* the attribute to the initilized in js when the div's are clicked */
+.register .setup:focus{
+    background: var(--subbackground);
+    border-radius: 10px;
+    padding: 10px 10px 0 10px;
+    margin-bottom: 10px;
+}
+/* div for the checkbox and the text beside it */
 .setup .dotted-circle{
     display: flex;
     align-items: center;
     gap: 5px;
 }
-
+/* div for the inner details */
 .register .setup .info{
     display: flex;
     align-items: center;
@@ -212,27 +219,27 @@ section{
     gap: 3rem;
     padding: 10px 35px;
 }
-
+/* attribute for the text beside the checkbox */
 .setup .dotted-circle h4{
     color: var(--textdark);
     font-size: 14px;
     font-weight: 500;
 }
-
+/* width for the registration part containing the paragraph text and the button*/
 .register .setup .info .additional-info{
     width: 57%;
 }
-
+/* attribute for the paragraph in the registration part*/
 .register .setup .info .additional-info p{
     font-size: 12px;
     font-weight: 500;
     color: var(--textmid);
 }
-
+/* attribute for the main text in the registration part */
 .register .setup .info .additional-info  a{
     font-weight: 600;
 }
-
+/* attribute for the buttons in the registration part */
 .register .setup .info .additional-info button{
     border: 2px solid var(--strokemid);
     background: var(--navdarkershade);
@@ -247,20 +254,20 @@ section{
     font-size: 13px;
     font-weight: 500;
 }
-
+/* hover effects on the button in the registration part */
 .register .setup .info .additional-info button:hover{
     background: var(--navdarkshade);
 }
-
+/* focus effects on the button in the registration part */
 .register .setup .info .additional-info button:focus{
     border: 2px solid var(--focused);
 }
-
+/* specified width for some buttons */
 .register .setup .info .additional-info #add,
 .register .setup .info .additional-info #domain{
     width: 110px;
 }
-
+/* customized button for the div with two buttons in the registration part */
 .register .setup .info .additional-info #import{
     border: none;
     background: transparent;
@@ -269,11 +276,11 @@ section{
     font-size: 13px;
     font-weight: 600;
 }
-
+/* hover effect for the  customized button for the div with two buttons in the registration part */
 .register .setup .info .additional-info #import:hover{
     background: var(--hover);
 }
-
+/* focus effect for the customized button for the div with two buttons in the registration part */
 .register .setup .info .additional-info #import:focus{
     border: 2px solid var(--focused);
 }
