@@ -5,7 +5,7 @@
     --navdarkershade: #1C181D;
     --textlight: #E3E3E3;
     --textmid: #616161;
-    --textdark: #475467;
+    --textdark: #303030;
     --strokelight: #EBEBEB;
     --strokemid: #000000;
     --strokedark: #FFFFFF;
@@ -35,6 +35,7 @@ header{
     justify-content: space-between;
     padding: 15px 10px;
     color: white;
+    position: relative;
 }
 /* search box */
 .search-box{
@@ -79,12 +80,37 @@ header{
     align-items: center;
     justify-content: center;
 }
+
+.notification-m{
+    border: 1px solid var(--strokelight);
+    border-radius: 10px;
+    background: var(--mainbackground);
+    color: var(--textmid);
+    padding: 15px 10px;
+    display: block;
+    width: 25%;
+    position: absolute;
+    top: 70px;
+    right: 5px;
+}
+.notification-m .m-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.notification-m .m-info h5{
+    color: var(--textdark);
+    font-size: 14px;
+    font-weight: 600;
+}
+
 /* attribute for the div containing the user name */
 .noti .user{
     background: var(--navdarkshade);
     height: 30px;
     padding: 3px 2px 5px 5px;
     border-radius: 5px;
+    cursor: pointer;
 }
 /* attribute for the user name main */
 .noti .user h3{
@@ -92,13 +118,118 @@ header{
     font-weight: 400;
 }
 /* attribute fot the short form of the name */
-.noti .user p{
+.noti .user #name-short{
     font-size: 12px;
     background: #40ff8c;
     padding: 4px;
     border-radius: 5px;
     font-weight: 500;
     color: var(--textmid);
+}
+/* admin dash */
+header .admin-dash{
+    display: none;
+    border: 1px solid var(--strokelight);
+    background: var(--mainbackground);
+    width: 25%;
+    margin: 0 10px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    z-index: 1000;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    transform: translate(0, 0);
+    transition: all 0.5s;
+}
+.admin-dash a:hover{
+    border-radius: 5px;
+    padding: 2px;
+    background: var(--hover);
+}
+/* admin name attribute */
+.admin-dash .admin-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--subbackground);
+    height: 35px;
+    margin: 5px;
+    padding: 10px 3px;
+    border-radius: 5px;
+}
+.admin-name .admin-name1{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--subbackground);
+    color: var(--textmid);
+    height: 30px;
+    padding: 5px 3px;
+    border-radius: 5px;
+}
+.admin-name .admin-name1 p{
+    background: #40ff8c;
+    border-radius: 5px;
+    padding: 6px;
+    font-size: 13px;
+    font-weight: 400;
+}
+.admin-name .admin-name1 h4{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--textdark);
+}
+.admin-dash .store-image{
+    border-bottom: 1px solid var(--strokelight);
+    padding: 0 5px;
+}
+.admin-dash .store-image a{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 5px;
+    padding-left: 10px;
+}
+.admin-dash .store-image #stores{
+    color: var(--textmid);
+    font-size: 13px;
+    font-weight: 500;
+}
+.admin-dash .help{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    gap: 13px;
+    padding-right: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--strokelight);
+}
+
+.admin-dash .help a,
+.accounts a{
+    color: var(--textmid);
+    font-size: 14px;
+    font-weight: 400;
+}
+.accounts{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px 20px;
+}
+.accounts .admin-mail{
+    color: var(--textdark);
+    line-height: 18px;
+}
+.accounts .admin-mail h5{
+    font-size: 14px;
+    font-weight: 500;
+}
+.accounts .admin-mail p{
+    color: var(--textmid);
+    font-size: 13px;
 }
 /* containing the body items */
 section{
