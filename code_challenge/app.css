@@ -79,19 +79,23 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .notification-m{
     border: 1px solid var(--strokelight);
-    border-radius: 10px;
+    border-radius: 15px;
     background: var(--mainbackground);
     color: var(--textmid);
-    padding: 15px 10px;
-    display: block;
-    width: 25%;
+    padding: 15px 20px;
+    display: none;
+    width: 30%;
     position: absolute;
     top: 70px;
     right: 5px;
+    transform: translate(0, 0);
+    transition: all 0.5s;
+    z-index: 1000;
 }
 .notification-m .m-info{
     display: flex;
@@ -103,7 +107,16 @@ header{
     font-size: 14px;
     font-weight: 600;
 }
-
+.notification-m .m-text{
+    background: var(--subbackground);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-weight: 600;
+    margin-top: 15px;
+}
 /* attribute for the div containing the user name */
 .noti .user{
     background: var(--navdarkshade);
@@ -135,7 +148,7 @@ header .admin-dash{
     margin: 0 10px;
     padding-bottom: 5px;
     border-radius: 10px;
-    z-index: 1000;
+    z-index: 100;
     position: absolute;
     top: 70px;
     right: 0;
