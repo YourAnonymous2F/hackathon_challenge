@@ -37,6 +37,9 @@ header{
     color: white;
     position: relative;
 }
+header .second-logo{
+    display: none;
+}
 /* search box */
 .search-box{
     background: var(--navdarkshade);
@@ -59,7 +62,9 @@ header{
 }
 /* input search boc placeholder attribute */
 .search-box #search::placeholder{
-    color: var(--textlight);
+    color: var(--textmid);
+    font-size: 12px;
+    font-weight: 600;
 }
 /* display for the notification icon and the user info */
 .noti,
@@ -113,6 +118,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px 5px;
     height: 50px;
     font-weight: 600;
     margin-top: 15px;
@@ -133,7 +139,7 @@ header{
 /* attribute fot the short form of the name */
 .noti .user #name-short{
     font-size: 12px;
-    background: #40ff8c;
+    background: #36FBA1;
     padding: 4px;
     border-radius: 5px;
     font-weight: 500;
@@ -144,7 +150,7 @@ header .admin-dash{
     display: none;
     border: 1px solid var(--strokelight);
     background: var(--mainbackground);
-    width: 25%;
+    width: 30%;
     margin: 0 10px;
     padding-bottom: 5px;
     border-radius: 10px;
@@ -182,7 +188,7 @@ header .admin-dash{
     border-radius: 5px;
 }
 .admin-name .admin-name1 p{
-    background: #40ff8c;
+    background: #36FBA1;
     border-radius: 5px;
     padding: 6px;
     font-size: 13px;
@@ -244,18 +250,13 @@ header .admin-dash{
     color: var(--textmid);
     font-size: 13px;
 }
-/* containing the body items */
-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
-    gap: 10px;
-}
 /* the container for the select plans option */
 .container{
     background: var(--navdarkershade);
-    width: 65%;
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -265,8 +266,19 @@ section{
 }
 /* the text attribute in the select plan */
 .container h4{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
+}
+.container .extend a #select{
+    display: none;
+    width: 100px;
+    height: 30px;
+    background: var(--mainbackground);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
 }
 /* the div for the button selct plan */
 .container .box{
@@ -294,11 +306,14 @@ section{
 .container2{
     background: var(--mainbackground);
     border: 2px solid var(--strokelight);
-    width: 65%;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     padding: 15px;
+    overflow: hidden;
 }
 /* div containing the setup guide and arrow */
 .container2-info{
@@ -343,7 +358,7 @@ section{
     height: 5px;
 }
 /* the attribute to the initilized in js when the div's are clicked */
-.register .setup:focus{
+.register .setup:hover{
     background: var(--subbackground);
     border-radius: 10px;
     padding: 10px 10px 0 10px;
@@ -419,6 +434,7 @@ section{
     width: 130px;
     font-size: 13px;
     font-weight: 600;
+    box-shadow: none;
 }
 /* hover effect for the  customized button for the div with two buttons in the registration part */
 .register .setup .info .additional-info #import:hover{
@@ -427,4 +443,295 @@ section{
 /* focus effect for the customized button for the div with two buttons in the registration part */
 .register .setup .info .additional-info #import:focus{
     border: 2px solid var(--focused);
+}
+
+/* Responsiveness */
+@media screen and (min-width: 280px) and (max-width: 319px) {
+    header{
+        justify-content: center;
+        gap: 5px;
+    }
+    header .first-logo{
+        display: none;
+    }
+    header .second-logo{
+        display: block;
+    }
+    header .search-box{
+        width: 70%;
+    }
+    .noti .noti-image{
+        background: transparent;
+        margin-left: 10px;
+    }
+    .notification-m{
+        width: 80%;
+        text-align: center;
+        padding: 10px;
+    }
+    .noti .user{
+        background: transparent;
+    }
+    .user h3{
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+    .noti .user #name-short{
+        height: 30px;
+        width: 29px;
+        display: flex;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    header .admin-dash{
+        width: 80%;
+    }
+    main .container{
+        margin: 0;
+        margin-top: 15px;
+        border-radius: 0;
+        width: 100%;
+        align-items: start;
+    }
+    .container h4{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .container .extend a #select{
+        display: block;
+        margin-top: 10px;
+    }
+    .container .box #select{
+        display: none;
+    }
+    .container2{
+        margin: 0;
+        margin-top: 15px;
+        width: 100%;
+        border-radius: 0;
+        padding: 5px;
+    }
+    .container2-info{
+        padding-top: 5px;
+        margin: 0 15px;
+    }
+    .container2-info1 #p1{
+        font-size: 12px;
+    }
+    .info{
+        display: block;
+    }
+    .info img{
+        display: none;
+    }
+    .register .setup .info .additional-info{
+        width: 100%;
+    }
+    .register .setup .info .additional-info button{
+        margin-top: 15px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 424px) {
+    header{
+        justify-content: center;
+        gap: 5px;
+    }
+    header .first-logo{
+        display: none;
+    }
+    header .second-logo{
+        display: block;
+    }
+    header .search-box{
+        width: 70%;
+    }
+    .noti .noti-image{
+        background: transparent;
+        margin-left: 10px;
+    }
+    .notification-m{
+        width: 80%;
+        text-align: center;
+        padding: 10px;
+    }
+    .noti .user{
+        background: transparent;
+    }
+    .user h3{
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+    .noti .user #name-short{
+        height: 30px;
+        width: 29px;
+        display: flex;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    header .admin-dash{
+        width: 80%;
+    }
+    main .container{
+        margin: 0;
+        margin-top: 15px;
+        border-radius: 0;
+        width: 100%;
+        align-items: start;
+    }
+    .container h4{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .container .extend a #select{
+        display: block;
+        margin-top: 10px;
+    }
+    .container .box #select{
+        display: none;
+    }
+    .container2{
+        margin: 0;
+        margin-top: 15px;
+        width: 100%;
+        border-radius: 0;
+        padding: 5px;
+    }
+    .container2-info{
+        padding-top: 5px;
+        margin: 0 15px;
+    }
+    .container2-info1 #p1{
+        font-size: 12px;
+    }
+    .info{
+        display: block;
+    }
+    .info img{
+        display: none;
+    }
+    .register .setup .info .additional-info{
+        width: 100%;
+    }
+    .register .setup .info .additional-info button{
+        margin-top: 15px;
+    }
+    .register .setup .info .additional-info #import{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 584px) {
+    header{
+        justify-content: center;
+        gap: 5px;
+    }
+    header .first-logo{
+        display: none;
+    }
+    header .second-logo{
+        display: block;
+    }
+    header .search-box{
+        width: 70%;
+    }
+    .noti .noti-image{
+        background: transparent;
+        margin-left: 10px;
+    }
+    .notification-m{
+        width: 80%;
+        text-align: center;
+        padding: 10px;
+    }
+    .noti .user{
+        background: transparent;
+    }
+    .user h3{
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+    .noti .user #name-short{
+        height: 30px;
+        width: 29px;
+        display: flex;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    header .admin-dash{
+        width: 80%;
+    }
+    main .container{
+        margin: 0;
+        margin-top: 15px;
+        border-radius: 0;
+        width: 100%;
+        align-items: start;
+    }
+    .container h4{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .container .extend a #select{
+        display: block;
+        margin-top: 10px;
+    }
+    .container .box #select{
+        display: none;
+    }
+    .container2{
+        margin: 0;
+        margin-top: 15px;
+        width: 100%;
+        border-radius: 0;
+        padding: 5px;
+    }
+    .container2-info{
+        padding-top: 5px;
+        margin: 0 15px;
+    }
+    .container2-info1 #p1{
+        font-size: 12px;
+    }
+    .info{
+        display: block;
+    }
+    .info img{
+        display: block;
+    }
+    .register .setup .info .additional-info{
+        width: 100%;
+    }
+    .register .setup .info .additional-info button{
+        margin-top: 15px;
+    }
+    .register .setup .info .additional-info #import{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 585px) and (max-width: 1023px) {
+    .notification-m{
+        width: 50%;
+        text-align: center;
+        padding: 10px;
+    }
+    header .admin-dash{
+        width: 50%;
+    }
 }
