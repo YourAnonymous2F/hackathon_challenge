@@ -2,14 +2,14 @@
     --navlightshade: #656266;
     --navgreyshade: #616161;
     --navdarkshade: #322f33;
-    --navdarkershade: #1C181D;
+    --navdarkershade: #1A1A1A;
     --textlight: #E3E3E3;
     --textmid: #616161;
     --textdark: #303030;
-    --strokelight: #EBEBEB;
-    --strokemid: #000000;
-    --strokedark: #FFFFFF;
-    --hover: #F7F7F7;
+    --strokelight: #DBDBDB;
+    --strokemid: #E1E1E1;
+    --strokedark: #616161;
+    --hover: #F1F1F1;
     --pressed: #F0F0F0;
     --focused: #005BD3;
     --mainbackground: #FFFFFF;
@@ -537,7 +537,7 @@ header .admin-dash{
     }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 424px) {
+@media only screen and (min-width: 320px) and (max-width: 520px) {
     header{
         justify-content: center;
         gap: 5px;
@@ -631,7 +631,7 @@ header .admin-dash{
     }
 }
 
-@media only screen and (min-width: 425px) and (max-width: 584px) {
+@media only screen and (min-width: 520px) and (max-width: 680px) {
     header{
         justify-content: center;
         gap: 5px;
@@ -725,7 +725,7 @@ header .admin-dash{
     }
 }
 
-@media only screen and (min-width: 585px) and (max-width: 1023px) {
+@media only screen and (min-width: 681px) and (max-width: 1023px) {
     .notification-m{
         width: 50%;
         text-align: center;
